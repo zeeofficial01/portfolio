@@ -1,0 +1,230 @@
+/* ===== Global Styles ===== */
+* {
+    transition: 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Header ===== */
+header {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+/* ===== Button ===== */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Section ===== */
+section {
+    padding: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+}
+
+h2 {
+    color: #2563eb;
+}
+
+/* ===== Navigation ===== */
+nav {
+    background: #1e293b;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #38bdf8;
+    transform: scale(1.1);
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+    text-align: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* ===== MENU ICON (IMPORTANT FIX) ===== */
+.menu {
+    display: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* ===== Skills ===== */
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
+    background: #e2e8f0;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* ===== Projects ===== */
+#projects .project {
+    background: #f1f5f9;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #2563eb;
+    transition: 0.3s ease;
+}
+
+#projects .project:hover,
+#skills li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Typing ===== */
+.typing {
+    font-size: 20px;
+    color: #38bdf8;
+    border-right: 2px solid white;
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f172a;
+    color: white;
+    margin-top: 40px;
+}
+
+/* ===== Contact Links ===== */
+#contact a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Dark Mode ===== */
+.dark {
+    background: #0f172a;
+    color: white;
+}
+
+.dark section {
+    background: #111827;
+}
+
+.dark nav {
+    background: #000;
+}
+
+.dark #skills li {
+    background: #1f2937;
+    color: white;
+}
+
+.dark #projects .project {
+    background: #1f2937;
+    color: white;
+}
+
+.dark footer {
+    background: #000;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== MOBILE FIX (IMPORTANT) ===== */
+@media (max-width: 768px) {
+
+    header {
+        padding: 40px 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #1e293b;
+        padding: 10px 0;
+    }
+
+    .nav-links a,
+    .nav-links button {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+}
